@@ -1,0 +1,12 @@
+{
+  "name": "edtech-key-rotation-adr",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-strip-types src/course_delivery.test.ts",
+    "start": "node --experimental-strip-types src/rotation_service.ts"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}

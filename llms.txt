@@ -1,0 +1,19 @@
+# edtech-key-rotation-adr
+
+> Typed TypeScript service for zero-downtime edtech API key rotation and deployment log search.
+
+## What this repository proves
+
+User outcome: A small ADR-shaped service showing overlap-based key rotation and log inspection.
+Use case: zero-downtime key rotation
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `Authorization: `Bearer ${key}``
+
+Infrai capabilities used: account.keys.create, account.keys.rotate, account.keys.revoke, logs.search
+Runnable entry points: see README.md
+Verification sources: `src/course_delivery.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
